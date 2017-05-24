@@ -2,7 +2,7 @@ Context-Aware Configuration Training: AEM
 =========================================
 
 This training projects targets the following training modules:
-* [PVTRAIN-167 wcm.io Context-Aware Configuration](https://confluence.pvtool.org/x/wIWmE)
+* [PVTRAIN-167 wcm.io Context-Aware Configuration](http://training.wcm.io/caconfig/PVTRAIN-167-wcm.io-Context-Aware-Configuration.html)
 
 
 Requirements
@@ -35,7 +35,7 @@ Configure File System Resource Provider
 
 You can mount the files system of your eclipse project to directly see changes in Sightly HTML, JSON oder other files in your running AEM application without having to redeploy the OSGi bundles. Deploying the OSGi bundle is only required if you change Java code.
 
-To setup the files ystem synchronization go to the folder of the bundle project below `bundles/` and execute on it:
+To setup the files system synchronization go to the folder of the bundle project below `bundles/` and execute on it:
 
 ```
 mvn sling:fsmount
@@ -45,4 +45,4 @@ mvn sling:fsmount
 Exercises
 ---------
 
-See [PVTRAIN-168-02 AEM Context-Aware Configuration](https://confluence.pvtool.org/x/oIamE)
+See [PVTRAIN-168-02 AEM Context-Aware Configuration](http://training.wcm.io/caconfig/PVTRAIN-168-02-AEM-Context-Aware-Configuration.html)

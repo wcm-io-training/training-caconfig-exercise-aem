@@ -1,6 +1,3 @@
-# This is the central .gitattributes file for all pro!vision GIT repos. Please do not change it on project-level.
-# See https://jira.pvtool.org/confluence/x/IACuBg for details.
-
 # Declare text files with unix file ending
 *.conf text eol=lf
 *.config text eol=lf
@@ -9,6 +6,7 @@
 *.esp text eol=lf
 *.ecma text eol=lf
 *.hbrs text eol=lf
+*.hbs text eol=lf
 *.htm text eol=lf
 *.html text eol=lf
 *.java text eol=lf
@@ -38,6 +36,8 @@
 *.xsd text eol=lf
 *.xsl text eol=lf
 *.xslt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
 
 
 # Declare windows-specific text files with windows file ending
