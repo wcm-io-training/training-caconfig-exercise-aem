@@ -1,0 +1,13 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "pro!vision Training CAConfig Configuration Editor",
+  "ranking": 1000,
+
+  "allowedPaths": "^/content/pv-training-caconfig/.+/tools(/.+)?$",
+  "allowedChildren": "",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "pv-training/caconfig/components/page/configEditor"
+  }
+}

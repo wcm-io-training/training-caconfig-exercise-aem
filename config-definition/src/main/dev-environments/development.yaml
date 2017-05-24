@@ -1,0 +1,25 @@
+# Local AEM configuration for Development Environment
+
+nodes:
+
+- node: aem-author
+  roles:
+  - role: aem-cms
+    variant: aem-author
+  - role: pv-training-caconfig-aem-cms
+    variant: aem-author
+
+- node: aem-publish
+  roles:
+  - role: aem-cms
+    variant: aem-publish
+  - role: pv-training-caconfig-aem-cms
+    variant: aem-publish
+
+config:
+  contentPackage.group: "pv-training"
+  app.sampleContent: true
+
+  # Log levels
+  log:
+    projectSpecificLogLevel: info

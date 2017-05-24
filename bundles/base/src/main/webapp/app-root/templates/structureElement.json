@@ -1,0 +1,13 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "pro!vision Training CAConfig Structure Element",
+  "ranking": 1020,
+
+  "allowedPaths": "^/content/pv-training-caconfig(/.+)?$",
+  "allowedChildren": "^/apps/pv-training/caconfig/templates/.+$",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "pv-training/caconfig/components/page/structureElement"
+  }
+}

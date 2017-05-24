@@ -26,4 +26,5 @@ npm-debug.log
 .sass-cache
 .rubygems-gem-maven-plugin
 *.sublime-*
+*nbactions*.xml
 .temp/

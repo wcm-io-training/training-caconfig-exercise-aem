@@ -1,0 +1,2 @@
+# Empty file needed so "all" clientlib is recognized as clientlib
+# Do not put any JS files here

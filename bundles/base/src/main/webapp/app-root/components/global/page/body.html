@@ -1,0 +1,11 @@
+<sly data-sly-test="${currentPage.listChildren.hasNext}">  
+  <div class="page-header">
+    <h2>Children</h2>
+  </div>
+  <div data-sly-list.child="${currentPage.listChildren}" class="list-group">
+    <a href="${child.path @ extension='html'}" class="list-group-item">${child.name}</a>
+  </div>
+</sly>
+<a href="${currentPage.parent.path @ extension='html'}">Back to parent</a>
+
+<sly data-sly-include="config.html"/>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.pro-vision.training</groupId>
+    <artifactId>de.pro-vision.training.caconfig.aem.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../parent/pom.xml</relativePath>
+  </parent>
+
+  <groupId>de.pro-vision.training</groupId>
+  <artifactId>de.pro-vision.training.caconfig.aem.sample-content</artifactId>
+  <description>AEM Application sample content</description>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>content-package</packaging>
+
+  <properties>
+    <content-package-name>pv-training-caconfig-sample-content</content-package-name>
+    <content-package-group>pv-training</content-package-group>
+  </properties>
+
+  <build>
+    <finalName>${content-package-name}-${project.version}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>com.day.jcr.vault</groupId>
+        <artifactId>content-package-maven-plugin</artifactId>
+        <configuration>
+          <name>${content-package-name}</name>
+          <group>${content-package-group}</group>
+          <filters>
+            <filter>
+              <root>/content/pv-training-caconfig</root>
+            </filter>
+            <filter>
+              <root>/conf/pv-training-caconfig</root>
+            </filter>
+          </filters>
+        </configuration>
+      </plugin>
+
+      <!-- Do not generate eclipse project files -->
+      <plugin>
+        <groupId>io.wcm.devops.maven.plugins</groupId>
+        <artifactId>eclipse-maven-plugin</artifactId>
+        <inherited>true</inherited>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+      <!-- Do not deploy sources to repository -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <configuration>
+          <attach>false</attach>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>

@@ -1,0 +1,27 @@
+<div class="page-header">
+  <h2>Configuration properties</h2>
+</div>
+
+<sly data-sly-test.siteConfig="${caconfig['de.provision.training.caconfig.aem.config.SiteConfig']}"
+    data-sly-test.linkList="${caconfig['de.provision.training.caconfig.aem.config.LinkList']}"/>
+
+<dl>
+  <dt>Site URL</dt>
+  <dd>${siteConfig.siteUrl}</dd>
+</dl>
+<dl>
+  <dt>Shopping basked visible</dt>
+  <dd>${siteConfig["shoppingBasket/visible"]}</dd>
+</dl>
+<dl>
+  <dt>Max shopping basket items</dt>
+  <dd>${siteConfig["shoppingBasket/maxItems"]}</dd>
+</dl>
+
+
+<sly data-sly-test="${!linkList.empty}">
+  <h3>Link list</h3>
+  <ul data-sly-list.item="${linkList}">
+      <li><a href="${item.pagePath @ extension='html'}">${item.name}</a></li>
+  </ul>
+</sly>

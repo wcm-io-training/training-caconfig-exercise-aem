@@ -1,0 +1,12 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <sly data-sly-resource="${@ resourceType='pv-training/caconfig/components/global/wcmInit' }" />
+
+  <title>${currentPage.title}</title>
+
+  <sly data-sly-call="${clientLib.css @ categories=['pv-training.caconfig.all']}" />
+
+</sly>

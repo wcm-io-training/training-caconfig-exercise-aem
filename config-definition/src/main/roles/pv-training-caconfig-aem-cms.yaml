@@ -1,0 +1,54 @@
+# Adobe Experience Manager (AEM) Instance.
+# AEM quickstart runs directly from command line with embedded Jetty Servlet Container.
+
+variants:
+- variant: aem-author
+- variant: aem-publish
+
+templateDir: pv-training-caconfig-aem-cms
+
+files:
+
+# AEM OSGi System Configuration
+- file: pv-training-caconfig-aem-cms-config.provisioning
+  dir: packages
+  template: pv-training-caconfig-aem-cms-config.provisioning.hbs
+  postProcessors:
+  - aem-contentpackage-osgiconfig
+  postProcessorOptions:
+    contentPackage:
+      name: pv-training-caconfig-aem-cms-config
+      rootPath: /apps/pv-training-caconfig-aem-cms-config/config
+      filters:
+      - filter: /apps/pv-training-caconfig-aem-cms-config
+
+# Application package
+- url: mvn:de.pro-vision.training/de.pro-vision.training.caconfig.aem.complete//zip
+  dir: packages
+
+# Application sample content package
+- url: mvn:de.pro-vision.training/de.pro-vision.training.caconfig.aem.sample-content//zip
+  dir: packages
+  condition: ${app.sampleContent}
+
+
+# Defines configuration parameters and default values
+config:
+  contentPackage:
+    group: pv-training
+    version: "${version}"
+
+  app:
+    sampleContent: false
+
+  # Log levels
+  log:
+    projectSpecificLogLevel: warn
+
+
+  # Example for config override configuration
+  #configOverrides:
+  #  "/path/to/config/scope":
+  #    siteUrl:
+  #    siteUrlSecure:
+  #    siteUrlAuthor:

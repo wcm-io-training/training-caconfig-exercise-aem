@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.pro-vision.training</groupId>
+    <artifactId>de.pro-vision.training.caconfig.aem.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../parent/pom.xml</relativePath>
+  </parent>
+
+  <groupId>de.pro-vision.training</groupId>
+  <artifactId>de.pro-vision.training.caconfig.aem.config-definition</artifactId>
+  <description>AEM Application CONGA roles and templates</description>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>config-definition</packaging>
+
+  <properties>
+    <config.environment>development</config.environment>
+  </properties>
+
+  <dependencies>
+
+    <!-- Use generic AEM CMS and Dispatcher roles -->
+    <dependency>
+      <groupId>io.wcm.devops.conga.definitions</groupId>
+      <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
+      <version>0.9.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <!-- Application packages -->
+    <dependency>
+      <groupId>de.pro-vision.training</groupId>
+      <artifactId>de.pro-vision.training.caconfig.aem.complete</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>zip</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>de.pro-vision.training</groupId>
+      <artifactId>de.pro-vision.training.caconfig.aem.sample-content</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>zip</type>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+
+    <plugins>
+
+      <plugin>
+        <groupId>io.wcm.devops.conga</groupId>
+        <artifactId>conga-maven-plugin</artifactId>
+        <executions>
+
+          <!-- Generate configuration for local development AEM instance -->
+          <execution>
+            <id>lauchpad-configuration-generate</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <environmentDir>${basedir}/src/main/dev-environments</environmentDir>
+              <environments>
+                <environment>${config.environment}</environment>
+              </environments>
+            </configuration>
+          </execution>
+
+        </executions>
+      </plugin>
+
+      <!-- Do not generate eclipse project files -->
+      <plugin>
+        <groupId>io.wcm.devops.maven.plugins</groupId>
+        <artifactId>eclipse-maven-plugin</artifactId>
+        <inherited>true</inherited>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <profiles>
+
+    <!-- Deploy AEM packages from generated configuration to AEM instance -->
+    <profile>
+      <id>deploy-packages</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.wcm.devops.conga.plugins</groupId>
+            <artifactId>conga-aem-maven-plugin</artifactId>
+            <configuration>
+              <nodeDirectory>target/configuration/${config.environment}/aem-author</nodeDirectory>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+  </profiles>
+
+</project>

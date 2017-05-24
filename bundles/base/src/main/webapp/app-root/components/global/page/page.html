@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <sly data-sly-include="html_head.html"/>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1>${currentPage.title}</h1>
+      </div>
+
+      <sly data-sly-include="body.html"/>
+
+    </div>
+
+    <sly data-sly-include="html_footer_libs.html"/>
+
+  </body>
+</html>

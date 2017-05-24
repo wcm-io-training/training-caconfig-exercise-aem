@@ -1,0 +1,17 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "pro!vision Training CAConfig Homepage",
+  "ranking": 10,
+
+  "allowedPaths": "^/content/pv-training-caconfig(/.+)?$",
+  "allowedChildren": "^/apps/pv-training/caconfig/templates/.+$",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "pv-training/caconfig/components/page/homepage",
+
+    /* This is only required for the homepage to enable responsive preview mode */
+    "cq:deviceGroups": ["/etc/mobile/groups/responsive"]
+
+  }
+}
