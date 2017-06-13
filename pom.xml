@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.wcm.maven</groupId>
-    <artifactId>io.wcm.maven.aem-global-parent</artifactId>
-    <version>1.2.2</version>
-    <relativePath/>
+    <groupId>de.pro-vision.training</groupId>
+    <artifactId>de.pro-vision.training.caconfig.aem.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>parent/pom.xml</relativePath>
   </parent>
 
   <groupId>de.pro-vision.training</groupId>
