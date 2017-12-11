@@ -1,4 +1,4 @@
-# Local AEM configuration for Development Environment
+# AEM configuration for local development environment
 
 nodes:
 
@@ -17,7 +17,7 @@ nodes:
     variant: aem-publish
 
 config:
-  contentPackage.group: "pv-training"
+  contentPackage.group: pv-training
   app.sampleContent: true
 
   # Log levels
