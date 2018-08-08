@@ -46,3 +46,15 @@ Exercises
 ---------
 
 See [PVTRAIN-168-02 AEM Context-Aware Configuration](http://training.wcm.io/caconfig/PVTRAIN-168-02-AEM-Context-Aware-Configuration.html)
+
+
+Maven Settings
+--------------
+
+To build the project you have to configure additional [Maven Repositories](http://wcm.io/maven.html) in your settings.xml.
+
+Alternatively you can build the project by specifying:
+
+```
+mvn --settings .travis.maven-settings.xml clean install
+```
