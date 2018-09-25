@@ -8,7 +8,7 @@ This training projects targets the following training modules:
 Requirements
 ------------
 
-* AEM 6.3 author instance running on port 4502
+* AEM 6.4 author instance running on port 4502
 
 
 Deploy sample project
