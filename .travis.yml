@@ -21,6 +21,7 @@ language: java
 
 jdk:
 - oraclejdk8
+- openjdk11
 
 # Make sure travis can use container-based infrastructure
 sudo: false
@@ -28,9 +29,9 @@ sudo: false
 install: "mvn -s ./.travis.maven-settings.xml clean"
 
 script:
-- "mvn -s ./.travis.maven-settings.xml -Pcontinuous-integration -U -Dmaven.javadoc.skip=true install"
+- "mvn -s ./.travis.maven-settings.xml -Pcontinuous-integration -U install"
 
-# exlude release tags like xyz-1.0.0 or xyz-1
+# exclude release tags like xyz-1.0.0 or xyz-1
 branches:
   except:
   - /^.*\-\d+(\.\d+\.\d+)?(\..*|\-.*)?$/
@@ -39,11 +40,3 @@ branches:
 cache:
   directories:
   - '$HOME/.m2/repository'
-
-# this will not work yet with a google groups mailing list - see https://github.com/travis-ci/travis-ci/issues/2513
-#notifications:
-#  email:
-#    recipients:
-#      - wcm-io-dev@googlegroups.com
-#    on_success: change
-#    on_failure: always
