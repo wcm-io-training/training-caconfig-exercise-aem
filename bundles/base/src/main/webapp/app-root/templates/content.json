@@ -11,7 +11,7 @@
     "sling:resourceType": "pv-training/caconfig/components/page/content",
 
     /* This is only required for the homepage to enable responsive preview mode */
-    "cq:deviceGroups": ["/etc/mobile/groups/responsive"]
+    "cq:deviceGroups": ["mobile/groups/responsive"]
 
   }
 }
