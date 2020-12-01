@@ -1,5 +1,6 @@
 Context-Aware Configuration Training: AEM
 =========================================
+[![Build Status](https://travis-ci.com/wcm-io-training/training-caconfig-exercise-aem.png?branch=master)](https://travis-ci.com/wcm-io-training/training-caconfig-exercise-aem)
 
 This training projects targets the following training modules:
 * [PVTRAIN-167 wcm.io Context-Aware Configuration](http://training.wcm.io/caconfig/PVTRAIN-167-wcm.io-Context-Aware-Configuration.html)
