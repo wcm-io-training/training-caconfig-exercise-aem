@@ -1,6 +1,6 @@
 Context-Aware Configuration Training: AEM
 =========================================
-[![Build Status](https://travis-ci.com/wcm-io-training/training-caconfig-exercise-aem.png?branch=master)](https://travis-ci.com/wcm-io-training/training-caconfig-exercise-aem)
+[![Build](https://github.com/wcm-io-training/training-caconfig-exercise-aem/workflows/Build/badge.svg?branch=master)](https://github.com/wcm-io-training/training-caconfig-exercise-aem/actions?query=workflow%3ABuild+branch%3Amaster)
 
 This training projects targets the following training modules:
 * [PVTRAIN-167 wcm.io Context-Aware Configuration](http://training.wcm.io/caconfig/PVTRAIN-167-wcm.io-Context-Aware-Configuration.html)
@@ -57,5 +57,5 @@ To build the project you have to configure additional [Maven Repositories](http:
 Alternatively you can build the project by specifying:
 
 ```
-mvn --settings .travis.maven-settings.xml clean install
+mvn --settings .maven-settings.xml clean install
 ```
