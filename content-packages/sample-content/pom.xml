@@ -32,6 +32,20 @@
           <name>${contentPackage.name}</name>
           <group>${contentPackage.group}</group>
           <packageType>content</packageType>
+
+          <validatorsSettings>
+            <jackrabbit-filter>
+              <options>
+                <validRoots>
+                  /conf,
+                  /content,
+                  /content/dam
+                </validRoots>
+                <severityForUncoveredAncestorNodes>debug</severityForUncoveredAncestorNodes>
+              </options>
+            </jackrabbit-filter>
+          </validatorsSettings>
+
           <filters>
             <filter>
               <root>/content/pv-training-caconfig</root>

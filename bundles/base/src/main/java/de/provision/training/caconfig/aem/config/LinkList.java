@@ -1,4 +1,3 @@
-/* Copyright (c) pro!vision GmbH. All rights reserved. */
 package de.provision.training.caconfig.aem.config;
 
 import org.apache.sling.caconfig.annotation.Configuration;

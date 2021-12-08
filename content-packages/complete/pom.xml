@@ -60,6 +60,16 @@
           <group>${contentPackage.group}</group>
           <packageType>container</packageType>
 
+          <validatorsSettings>
+            <jackrabbit-filter>
+              <options>
+                <validRoots>
+                  /apps/pv-training
+                </validRoots>
+              </options>
+            </jackrabbit-filter>
+          </validatorsSettings>
+
           <filters>
             <filter>
               <root>/apps/pv-training/${contentPackage.name}</root>
