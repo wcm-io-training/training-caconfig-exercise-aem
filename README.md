@@ -3,7 +3,7 @@ Context-Aware Configuration Training: AEM
 [![Build](https://github.com/wcm-io-training/training-caconfig-exercise-aem/workflows/Build/badge.svg?branch=master)](https://github.com/wcm-io-training/training-caconfig-exercise-aem/actions?query=workflow%3ABuild+branch%3Amaster)
 
 This training projects targets the following training modules:
-* [PVTRAIN-167 wcm.io Context-Aware Configuration](http://training.wcm.io/caconfig/PVTRAIN-167-wcm.io-Context-Aware-Configuration.html)
+* [DATM-55 wcm.io Context-Aware Configuration](https://training.wcm.io/caconfig/DATM-55-wcm.io-Context-Aware-Configuration.html)
 
 
 Requirements
@@ -46,7 +46,7 @@ mvn sling:fsmount
 Exercises
 ---------
 
-See [PVTRAIN-168-02 AEM Context-Aware Configuration](http://training.wcm.io/caconfig/PVTRAIN-168-02-AEM-Context-Aware-Configuration.html)
+See [DATM-56 Context-Aware Configuration exercises](https://training.wcm.io/caconfig/DATM-56-Context-Aware-Configuration-exercises.html)
 
 
 Maven Settings
