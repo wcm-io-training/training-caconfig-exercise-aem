@@ -44,6 +44,16 @@
       <artifactId>io.wcm.caconfig.editor</artifactId>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.wcm.ui.granite</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.sling.commons</artifactId>
+      <scope>compile</scope>
+    </dependency>
 
   </dependencies>
 
