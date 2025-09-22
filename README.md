@@ -1,6 +1,6 @@
 Context-Aware Configuration Training: AEM
 =========================================
-[![Build](https://github.com/wcm-io-training/training-caconfig-exercise-aem/workflows/Build/badge.svg?branch=master)](https://github.com/wcm-io-training/training-caconfig-exercise-aem/actions?query=workflow%3ABuild+branch%3Amaster)
+[![Build](https://github.com/wcm-io-training/training-caconfig-exercise-aem/actions/workflows/maven-build.yml/badge.svg?branch=master)](https://github.com/wcm-io-training/training-caconfig-exercise-aem/actions?query=workflow%3ABuild+branch%3Amaster)
 
 This training projects targets the following training modules:
 * [DATM-55 wcm.io Context-Aware Configuration](https://training.wcm.io/caconfig/DATM-55-wcm.io-Context-Aware-Configuration.html)
